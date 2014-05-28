@@ -1,0 +1,52 @@
+.post{
+	.title, .entry-content{
+
+	}
+	.meta{
+		line-height: 2;
+		font-size: 0.9em;
+		color: $gray-light;
+		margin-left: 0;
+		padding-left: 0;
+		a{
+			// @include link-colors($gray-light, $gray-lighter);
+			@include transition(0.3s);
+		}
+		.date, .tags, .comments{
+			display: inline;
+			padding-left: 30px;
+			margin-right: 10px;
+			position: relative;
+			&:before{
+				color: $gray;
+				font: 1.3em $font-icon;
+				line-height: 1.6em;
+				position: absolute;
+				left: 0;
+			}
+		}
+		.date:before{content: "\f073";}
+		.tags:before{content: "\f02c";}
+		.comments:before{content: "\f075";}
+	}
+}
+// Extra small devices (phones, less than 768px)
+// No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+	.post{
+		.title, .entry-content{
+			margin-left: 0;
+		}
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+	.post{
+		.title, .entry-content, .meta{
+			margin-left: 100px;
+		}
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {  }

@@ -1,0 +1,87 @@
+body{
+	background-color: $dark-background;
+}
+.row{
+	//height: 100%;
+	//display: table-row;
+
+	.sidebar{
+		//display: table-cell;
+		//float: none;
+		//vertical-align: top;
+
+		p{
+			color: $white;
+		}
+	}
+	#mainCol{
+		background-color: $white;
+	}
+}
+// Pills
+// -------------------------
+.nav-pills {
+	text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+
+    > a {
+      //padding: $nav-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: $nav-link-hover-bg;
+      }
+    }
+  }
+}
+
+.toggle-sidebar {
+	//outline: none;
+	position: absolute;
+	text-align: right;
+	//right: -10px;
+	top: 0;
+	right: 0;
+	//display: inline-block;
+	text-decoration: none;
+	color: #000;
+	//width: 9px;
+	cursor: pointer;
+	//right: -11px;
+	top: 0;
+	float: right;
+	width: 40px;
+	height: 50px;
+	font-size: 40px;
+	line-height: 35px;
+	border-radius: 0.2em 0 0 0.2em;
+	text-align: center;
+	//background: #f8f8f8 url('/images/noise.png?1358601811') top left;
+	background-color: #fff;
+	border-bottom: 1px solid #dadde3;
+	border-left: 1px solid #dadde3;
+	content: "\00BB";
+	text-indent: -1px;
+	.fa{
+		margin-top: 3px;
+	}
+}
+// Extra small devices (phones, less than 768px)
+// No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+	.nav-pills{
+		text-align: left;
+		li{
+			display: block;
+		}
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {  }

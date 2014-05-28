@@ -1,0 +1,13 @@
+<section class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Recent Posts</h3>
+	</div>
+	<div class="list-group">
+		{% for post in site.posts limit: site.recent_posts %}
+		<!-- {% if category_url == page.url %}active{% endif %} -->
+		<a class="list-group-item " href="{{ root_url }}{{ post.url }}">
+				{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}
+			</a>
+		{% endfor %}
+	</div>
+</section>
